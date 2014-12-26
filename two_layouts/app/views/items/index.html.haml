@@ -1,0 +1,40 @@
+
+.w-header
+  %h4 Header
+  %ul
+    %li= link_to 'Главная', root_path
+    %li= link_to 'Контакты', contacts_path
+    %li= link_to 'О магазине', about_path
+
+.p-items
+  %h2 Товары:   выбирай и покупай
+  - @items.each do |item|
+    .item
+      =item
+      =link_to 'show', item_path(item)
+      =link_to 'buy',  buy_item_path(item), method: :post
+
+.w-footer
+  %h4 FOOTER
+  %ul
+    %li Главная
+    %li Юзеры
+    %li Контакты
+
+  %p Copyright 2007
+  %p все права ваши
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
