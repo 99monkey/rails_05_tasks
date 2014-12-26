@@ -1,0 +1,9 @@
+
+
+%form{action: '/', method: 'get'}
+  %input{type:'text', name:'q', placeholder: 'поиск', value: params[:q]}
+  %submit{value: 'найти'}
+%ul
+  - @films.each do |film|
+    %li= film
+
